@@ -65,6 +65,16 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     cursor: pointer;
+    text-decoration: none;
+    color: ${theme.color.black.regular};
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
   }
 `;
 
