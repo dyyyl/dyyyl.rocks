@@ -1,21 +1,48 @@
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import Link from '../shared/components/Link';
 import Layout from '../shared/components/Layout';
-import Image from '../shared/components/image';
+import Link from '../shared/components/Link';
 import SEO from '../shared/components/seo';
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <div>
       <SEO title="Home" />
       <h1>Simple & Charming</h1>
-      <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">Go to page 2</Link>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <Link to={node.fields.slug}>
+            <h4>{node.frontmatter.title.toUpperCase()}</h4>
+          </Link>
+        </div>
+      ))}
     </div>
   </Layout>
 );
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
