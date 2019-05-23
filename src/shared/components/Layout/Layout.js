@@ -1,26 +1,14 @@
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from 'styled-components';
+
+import Grid from './Grid';
+import Main from './Main';
 
 import Header from '../Header';
+import Navigation from '../Navigation';
+
 import GlobalStyle from '../../styles/GlobalStyle';
-
-const Grid = styled.main`
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: navigation main;
-`;
-
-const Navigation = styled.nav`
-  border-right: 1px solid black;
-`;
-
-const Main = styled.article`
-  display: flex;
-  justify-content: center;
-`;
 
 const Layout = ({ children }) => (
   <StaticQuery
