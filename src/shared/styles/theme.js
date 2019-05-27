@@ -4,23 +4,23 @@ const theme = {
     secondary: "'Montserrat', serif",
   },
   fontSize: {
-    small: 'font-size: 20px; line-height: 30px',
-    regular: 'font-size: 24px; line-height: 32px',
-    large: 'font-size: 30px; line-height: 40px',
-    larger: 'font-size: 36px; line-height: 48px',
-    xlarge: 'font-size: 48px; line-height: 56px',
+    small: 'font-size: 1.8rem; line-height: 30px',
+    regular: 'font-size: 2.4rem; line-height: 32px',
+    large: 'font-size: 3.0rem; line-height: 40px',
+    larger: 'font-size: 3.6rem; line-height: 48px',
+    xlarge: 'font-size: 4.8rem; line-height: 56px',
   },
   color: {
     white: {
       regular: '#FFFFFF',
-      dark: '#F6F6F6',
+      dark: '#FBFBFB',
     },
     black: {
       lighter: '#ABA8AF',
       light: '#564F62',
-      regular: '#211E26',
+      regular: '#252525',
     },
-    primary: '#8bd8ed',
+    primary: '#d64292',
   },
   screen: {
     xs: '575px',

@@ -2,17 +2,18 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Container from '../components/Container';
 import Layout from '../components/Layout';
 
 const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
-      <div>
+      <Container>
         <h1>{post.frontmatter.title}</h1>
         {/* eslint-disable-next-line */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      </Container>
     </Layout>
   );
 };

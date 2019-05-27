@@ -4,12 +4,16 @@ import normalize from './normalize';
 import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans:300|Montserrat:400');
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans:300|Montserrat:400,600');
 
   ${normalize};
 
   * {
     box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
   }
 
   body {
@@ -18,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, p {
     margin: 0;
+    letter-spacing: 1px;
     font-weight: normal;
   }
 
@@ -36,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    ${theme.fontSize.regular};
+    ${theme.fontSize.small};
     color: ${theme.color.black.light};
   }
 
@@ -67,6 +72,7 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
     text-decoration: none;
     color: ${theme.color.black.regular};
+    font-weight: 600;
 
     &:hover {
       text-decoration: underline;

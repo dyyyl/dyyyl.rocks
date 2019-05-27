@@ -5,6 +5,9 @@ const PostLink = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  h4 {
+    font-size: 1.4rem;
+  }
 `;
 
 export default PostLink;
