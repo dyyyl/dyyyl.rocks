@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import SEO from '../components/seo';
 
 import Container from '../components/Container';
 import Layout from '../components/Layout';
@@ -9,10 +10,16 @@ const BlogPost = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <Container>
         <h1>{post.frontmatter.title}</h1>
-        {/* eslint-disable-next-line */}
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <p>
+          {post.frontmatter.date} • {post.fields.readingTime.text}
+        </p>
+        <div
+          style={{ marginTop: '2rem' }}
+          dangerouslySetInnerHTML={{ __html: post.html }} // eslint-disable-line
+        />
       </Container>
     </Layout>
   );
@@ -28,6 +35,12 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY", locale: "en-EN")
+      }
+      fields {
+        readingTime {
+          text
+        }
       }
     }
   }

@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-remark-reading-time',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {

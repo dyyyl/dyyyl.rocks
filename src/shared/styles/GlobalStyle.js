@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-family: ${theme.font.primary};
-    ${theme.fontSize.xlarge};
+    ${theme.fontSize.larger};
   }
 
   h2 {
@@ -40,18 +40,33 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     ${theme.fontSize.small};
-    color: ${theme.color.black.light};
+    color: ${theme.color.black.regular};
+  }
+
+  @media (max-width: ${theme.screen.md}) {
+    h1 {
+      ${theme.fontSize.regular};
+    }
+    h2 {
+      ${theme.fontSize.regular};
+    }
+    h3 {
+      ${theme.fontSize.small};
+    }
+    p {
+      ${theme.fontSize.small};
+    }
   }
 
   @media (max-width: ${theme.screen.sm}) {
     h1 {
-      ${theme.fontSize.larger};
+      ${theme.fontSize.regular};
     }
     h2 {
-      ${theme.fontSize.large};
+      ${theme.fontSize.regular};
     }
     h3 {
-      ${theme.fontSize.regular};
+      ${theme.fontSize.small};
     }
     p {
       ${theme.fontSize.small};
