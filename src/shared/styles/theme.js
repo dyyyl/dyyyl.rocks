@@ -1,7 +1,7 @@
 const theme = {
   font: {
-    primary: "'Work Sans', sans-serif",
-    secondary: "'Montserrat', serif",
+    primary: "'Toppan BunkyuMidashiGoStd EB', sans-serif",
+    secondary: "'Gineso Norm Regular', serif",
   },
   fontSize: {
     small: 'font-size: 1.8rem; line-height: 30px',

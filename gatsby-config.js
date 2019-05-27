@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: 'dyyyl. rocks',
+    title: 'ディイル。 岩',
     description: '"It\'s my blog!" -Wayne Gretzky',
     author: 'Dyl 🦊',
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'tma0uzm',
+        },
+      },
+    },
     {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: { files: ['**/*.{js,jsx}'] },
