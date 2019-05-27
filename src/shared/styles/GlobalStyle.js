@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-family: ${theme.font.primary};
+    color: ${theme.color.black.regular};
     ${theme.fontSize.larger};
   }
 
