@@ -8,31 +8,47 @@ import Main from './Main';
 import Header from '../Header';
 import Navigation from '../Navigation';
 
+import useWindowWidth from '../../hooks/useWindowWidth';
 import GlobalStyle from '../../styles/GlobalStyle';
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ children }) => {
+  const width = useWindowWidth();
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Grid>
-          <Navigation />
-          <Main>{children}</Main>
-        </Grid>
-        <GlobalStyle />
-      </>
-    )}
-  />
-);
+      `}
+      render={data => (
+        <>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          {width >= 1199 ? (
+            <Grid>
+              <Navigation />
+              <Main>{children}</Main>
+            </Grid>
+          ) : (
+            <main
+              style={{
+                height: '93vh',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <Main>{children}</Main>
+            </main>
+          )}
+          <GlobalStyle />
+        </>
+      )}
+    />
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
