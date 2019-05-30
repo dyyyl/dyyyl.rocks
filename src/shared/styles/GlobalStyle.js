@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
       ${theme.fontSize.regular};
     }
     h3 {
-      ${theme.fontSize.small};
+      ${theme.fontSize.regular};
     }
     p {
       ${theme.fontSize.small};
@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
       ${theme.fontSize.regular};
     }
     h3 {
-      ${theme.fontSize.small};
+      ${theme.fontSize.regular};
     }
     p {
       ${theme.fontSize.small};
@@ -95,6 +95,11 @@ const GlobalStyle = createGlobalStyle`
     &:active {
       text-decoration: none;
     }
+  }
+
+  ul li {
+    font-size: 1.75rem;
+    line-height: 2;
   }
 `;
 

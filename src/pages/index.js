@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
                   {node.frontmatter.date} • {node.fields.readingTime.text}
                 </p>
               </Link>
-              <Excerpt>{node.excerpt}</Excerpt>
+              <Excerpt>{node.frontmatter.description}</Excerpt>
             </Item>
           ))}
         </Container>
@@ -72,9 +72,9 @@ export const query = graphql`
           id
           frontmatter {
             title
+            description
             date(formatString: "MMMM DD, YYYY", locale: "en-EN")
           }
-          excerpt
           fields {
             slug
             readingTime {
