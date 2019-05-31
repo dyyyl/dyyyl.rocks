@@ -46,6 +46,8 @@ The _Rules of Hooks_ can be summarized as:
 
 > **Note**: The only other place Hooks can be called from are within your own custom hooks! Tune in next time for more on that ~
 
+&nbsp;
+
 ### The Code 👨🏽‍💻
 
 Below is a class component that renders a button that increases a counter by one each time it is clicked.
@@ -115,9 +117,9 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(<App />, rootElement);
 ```
 
-As always, you can find me on Twitter [@dyyyyyyyyyl][twitter] or [Github][dyl]
+&nbsp;
+
+As always, you can find me on Twitter [@dyyyyyyyyyl][twitter], or on [Github][dyl]
 
 [twitter]: https://twitter.com/dyyyyyyyyyl
 [dyl]: http://github.com/dyyyl
-
-&nbsp;

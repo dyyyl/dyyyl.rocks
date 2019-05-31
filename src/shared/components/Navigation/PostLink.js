@@ -7,6 +7,8 @@ const PostLink = styled.div`
   justify-content: center;
   h4 {
     font-size: 1.4rem;
+    letter-spacing: 0.75px;
+    font-weight: 700;
   }
 `;
 

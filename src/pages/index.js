@@ -24,7 +24,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Container>
         <SEO title="Home" />
-        <h1>Simple & Charming</h1>
+        <h1 style={{ fontWeight: '700' }}>Simple & Charming</h1>
         <h3 style={{ margin: '1rem auto' }}>
           <Power>{power}x</Power> UI Engineer - GraphQL Enthusiast - Speaker.
         </h3>

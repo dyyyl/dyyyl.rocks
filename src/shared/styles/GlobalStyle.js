@@ -4,6 +4,8 @@ import normalize from './normalize';
 import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Work+Sans:700,900&display=swap');
+
   ${normalize};
 
   * {
