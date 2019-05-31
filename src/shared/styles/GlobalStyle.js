@@ -4,8 +4,6 @@ import normalize from './normalize';
 import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://use.typekit.net/tma0uzm.css")
-
   ${normalize};
 
   * {

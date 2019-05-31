@@ -8,14 +8,6 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-remark-reading-time',
     {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'tma0uzm',
-        },
-      },
-    },
-    {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
       options: { files: ['**/*.{js,jsx}'] },
     },
