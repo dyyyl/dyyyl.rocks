@@ -1,3 +1,4 @@
+import { window, document } from 'browser-monads';
 import { useEffect, useState } from 'react';
 
 const useWindowWidth = () => {
