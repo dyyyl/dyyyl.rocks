@@ -8,11 +8,11 @@ import Main from './Main';
 import Header from '../Header';
 import Navigation from '../Navigation';
 
-import useWindowWidth from '../../hooks/useWindowWidth';
+import useWindowSize from '../../hooks/useWindowSize';
 import GlobalStyle from '../../styles/GlobalStyle';
 
 const Layout = ({ children }) => {
-  const width = useWindowWidth();
+  const windowSize = useWindowSize();
   return (
     <StaticQuery
       query={graphql`
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       render={data => (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
-          {width >= 1199 ? (
+          {windowSize.width >= 1199 ? (
             <Grid>
               <Navigation />
               <Main>{children}</Main>

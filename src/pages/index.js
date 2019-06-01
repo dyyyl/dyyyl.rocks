@@ -11,11 +11,11 @@ import Link from '../shared/components/Link';
 import Power from '../shared/components/Power';
 import SEO from '../shared/components/seo';
 
-import useWindowWidth from '../shared/hooks/useWindowWidth';
+import useWindowSize from '../shared/hooks/useWindowSize';
 
 const IndexPage = ({ data }) => {
   const [power, setPower] = useState(0.0);
-  const width = useWindowWidth();
+  const windowSize = useWindowSize();
 
   useEffect(() => {
     setPower((Math.random() * 10).toFixed(1));
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
           Follow me on <a href="https://twitter.com/dyyyyyyyyyl">Twitter</a> 🐦
         </Description>
       </Container>
-      {width <= 1199 ? (
+      {windowSize.width <= 1199 ? (
         <Container>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <Item key={node.id}>
