@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       render={data => (
         <>
           <Header siteTitle={data.site.siteMetadata.title} />
-          {windowSize.width >= 1199 || undefined ? (
+          {windowSize.width >= 1199 && windowSize.width !== undefined ? (
             <Grid>
               <Navigation />
               <Main>{children}</Main>
