@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
           Follow me on <a href="https://twitter.com/dyyyyyyyyyl">Twitter</a> 🐦
         </Description>
       </Container>
-      {windowSize.width <= 1199 ? (
+      {windowSize.width <= 1199 || undefined ? (
         <Container>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <Item key={node.id}>
