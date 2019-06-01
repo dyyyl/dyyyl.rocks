@@ -1,7 +1,8 @@
 const theme = {
   font: {
-    primary: "'Work Sans', sans-serif",
-    secondary: "'PT Sans', serif",
+    primary:
+      "'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', Osaka, 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif",
+    secondary: "'PT Sans', sans-serif",
   },
   fontSize: {
     small: 'font-size: 1.8rem; line-height: 30px',

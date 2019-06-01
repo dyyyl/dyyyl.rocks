@@ -4,7 +4,9 @@ import normalize from './normalize';
 import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Work+Sans:700,900&display=swap');
+  @import url('../fonts/Noto_Sans_JP/NotoSansJP-Black.otf');
+  @import url('../fonts/Noto_Sans_JP/NotoSansJP-Bold.otf');
+  @import url('../fonts/PT_Sans/PT_Sans-Web-Regular.ttf');
 
   ${normalize};
 
