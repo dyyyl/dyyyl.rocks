@@ -4,6 +4,16 @@ import normalize from './normalize';
 import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Noto Sans JP';
+    src: local('Noto Sans JP');
+  }
+
+  @font-face {
+    font-family: 'PT Sans';
+    src: local('PT Sans');
+  }
+
   ${normalize};
 
   * {
@@ -15,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: ${theme.font.secondary};
+      font-family: ${theme.font.secondary};
   }
 
   h1, h2, h3, p {
