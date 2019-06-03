@@ -70,17 +70,19 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
-          'X-Content-Type-Options': 'nosniff',
-          'Content-Security-Policy': "frame-ancestors 'none'",
-          'X-Frame-Options': 'DENY',
-          'X-XSS-Protection': '1; mode=block',
-        }, // option to add more headers. `Link` headers are transformed by the below criteria
-        allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
+          '/*': [
+            'X-Content-Type-Options: nosniff',
+            "Content-Security-Policy: frame-ancestors 'none'",
+            'X-Frame-Options: DENY',
+            'X-XSS-Protection: 1; mode=block',
+          ],
+        },
+        allPageHeaders: [],
+        mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        transformHeaders: (headers, path) => headers,
+        generateMatchPathRewrites: true,
       },
     },
     {
