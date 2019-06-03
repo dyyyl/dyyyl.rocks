@@ -5,8 +5,8 @@ import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Noto Sans JP Black';
-    src: local('Noto Sans JP Black');
+    font-family: 'Noto Sans JP';
+    src: local('Noto Sans JP');
   }
 
   @font-face {
