@@ -10,7 +10,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Noto Sans JP:700,900', 'PT Sans:400,700'],
+          families: ['Noto Sans JP:700,900:japanese', 'PT Sans:400,700'],
         },
       },
     },
