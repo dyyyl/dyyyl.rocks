@@ -6,6 +6,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Sans JP:700,900', 'PT Sans:400,700'],
+        },
+      },
+    },
     'gatsby-remark-reading-time',
     {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
