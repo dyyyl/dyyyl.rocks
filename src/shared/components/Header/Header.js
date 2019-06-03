@@ -6,13 +6,14 @@ import Link from '../Link';
 import TitleContainer from './TitleContainer';
 
 const Header = ({ siteTitle }) => (
-  <HeaderContainer>
+  <>
     <TitleContainer>
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
     </TitleContainer>
-  </HeaderContainer>
+    <HeaderContainer />
+  </>
 );
 
 Header.propTypes = {

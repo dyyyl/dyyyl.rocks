@@ -26,22 +26,17 @@ const Layout = ({ children }) => {
       `}
       render={data => (
         <>
-          <Header siteTitle={data.site.siteMetadata.title} />
           {width >= 1199 ? (
             <Grid>
+              <Header siteTitle={data.site.siteMetadata.title} />
               <Navigation />
               <Main>{children}</Main>
             </Grid>
           ) : (
-            <main
-              style={{
-                height: '93vh',
-                display: 'flex',
-                justifyContent: 'center',
-              }}
-            >
+            <Grid>
+              <Header siteTitle={data.site.siteMetadata.title} />
               <Main>{children}</Main>
-            </main>
+            </Grid>
           )}
           <GlobalStyle />
         </>

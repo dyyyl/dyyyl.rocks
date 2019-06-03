@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`
+  height: 100%;
   border-bottom: 1px solid black;
-  height: 7vh;
+
+  grid-area: header;
 `;
 
 export default HeaderContainer;
