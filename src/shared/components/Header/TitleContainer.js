@@ -9,7 +9,6 @@ const TitleContainer = styled.div`
   border-right: 1px solid black;
 
   h1 {
-    padding-top: 1.5%;
     padding-right: 1.5%;
     a {
       font-weight: 900;
