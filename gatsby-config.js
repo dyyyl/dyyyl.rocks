@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-csp',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -81,7 +80,7 @@ module.exports = {
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
         mergeCachingHeaders: true,
-        transformHeaders: (headers, path) => headers,
+        transformHeaders: headers => headers,
         generateMatchPathRewrites: true,
       },
     },
