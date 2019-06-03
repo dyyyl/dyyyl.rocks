@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
         </Description>
       </Container>
       {width <= 1199 ? (
-        <Container style={{ marginTop: '5%' }}>
+        <Container>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <Item key={node.id}>
               <Link to={node.fields.slug}>
