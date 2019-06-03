@@ -6,6 +6,7 @@ const Main = styled.article`
   width: 100%;
   flex-direction: column;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 `;
 
 export default Main;
