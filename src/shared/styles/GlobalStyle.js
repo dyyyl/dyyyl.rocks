@@ -6,13 +6,17 @@ import theme from './theme';
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Noto Sans JP';
-    src: local('Noto Sans JP');
+    src: local('Noto Sans JP') format('woff2')
+         local('Noto Sans JP') format('woff')
+         local('Noto Sans JP') format('truetype');
     font-display: fallback;
   }
 
   @font-face {
     font-family: 'PT Sans';
-    src: local('PT Sans');
+    src: local('PT Sans') format('woff2')
+         local('PT Sans') format('woff')
+         local('PT Sans') format('truetype');
     font-display: fallback;
   }
 

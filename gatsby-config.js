@@ -87,11 +87,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'dyyyl-rocks',
+        name: 'simple-and-charming',
         short_name: 'dyyyl.rocks',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#FBFBFB',
+        theme_color: '#d64292',
         display: 'minimal-ui',
         icon: 'src/shared/images/myFace.jpg', // This path is relative to the root of the site.
       },
