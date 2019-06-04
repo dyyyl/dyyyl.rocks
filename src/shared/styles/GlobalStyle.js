@@ -7,11 +7,13 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Noto Sans JP';
     src: local('Noto Sans JP');
+    font-display: fallback;
   }
 
   @font-face {
     font-family: 'PT Sans';
     src: local('PT Sans');
+    font-display: fallback;
   }
 
   ${normalize};
