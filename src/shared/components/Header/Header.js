@@ -9,7 +9,9 @@ const Header = ({ siteTitle }) => (
   <>
     <TitleContainer>
       <h1>
-        <Link to="/">{siteTitle}</Link>
+        <Link to="/" data-testid="title">
+          {siteTitle}
+        </Link>
       </h1>
     </TitleContainer>
     <HeaderContainer />
