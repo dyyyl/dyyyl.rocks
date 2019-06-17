@@ -14,6 +14,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#d64292',
+        showSpinner: false,
+      },
+    },
     'gatsby-remark-reading-time',
     {
       resolve: '@danbruegge/gatsby-plugin-stylelint',
