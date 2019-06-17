@@ -16,7 +16,7 @@ Often, we wrangle with complex components that cannot be broken down into more a
 
 > _Hooks apply the React philosophy (explicit data flow and composition) inside a component, rather than just between the components._
 
-> -- <cite>Dan Abromov</cite>
+> &mdash; Dan Abromov
 
 We run into these problems every day - animations, form handling, and managing external data sources are all incredibly tricky at scale across components, making complex components tricky to reason about.
 
