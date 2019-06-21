@@ -23,7 +23,7 @@ what is our vocabulary for describing the "best" case?!
 
 &nbsp;
 
-### Big... Oh!
+### Big... Oh! 🤭
 
 If we want to generalize our code for the purposes of discussing performance and
 comparing its value to other bits of code, we can use **Big-O** (aka **Bachmann–Landau**
