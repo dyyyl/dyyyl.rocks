@@ -8,7 +8,7 @@ description: Let's Learn us a Big-O for Great Good!
 
 An **algorithm** is a formal description of the logical steps it takes to carry
 out a task. As programmers, we constantly use algorithms in our work to abstract
-away complex logic into discrete, repoducable bits of code. These abstractions
+away complex logic into discrete, reproducable bits of code. These abstractions
 form the foundation of everything we accomplish as developers; from data
 fetching for our user interfaces, to sorting through the mountains of data that
 may need to be fetched.
