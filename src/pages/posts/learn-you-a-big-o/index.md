@@ -111,6 +111,19 @@ grow _proportionally_ with it.
 
 ### A Formal Introduction 🎩
 
+As you've now seen, Big O notation is a formalized method of 'fuzzy' counting.
+This methodology gives us a shared vocabulary to describe the correlation between
+increasing inputs with the increasing runtime of an algorithm. Details here don't
+matter so much - we really want to focus on trends.
+
+&nbsp;
+
+Referring back to our previous examples, we could say that our slick one-liner
+is **O(1)** - the runtime is not meaningfully affected by changes to the input.
+On the other hand, our initial for-loop based implementation is considered to be
+**O(n)** - the number of operations in this type of algorithm is bounded by a
+multiple of n.
+
 &nbsp;
 
 As always, you can find me on Twitter [@dyyyyyyyyyl][twitter], or on [Github][dyl]
