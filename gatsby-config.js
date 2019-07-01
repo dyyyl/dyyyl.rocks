@@ -90,19 +90,7 @@ module.exports = {
         generateMatchPathRewrites: true,
       },
     },
-    {
-      resolve: 'gatsby-plugin-csp',
-      directives: {
-        'frame-ancestors': 'self',
-        'script-src': "'self'",
-        'style-src': "'self' 'unsafe-inline'",
-        'img-src': "'self'",
-        'object-src': 'none',
-        'default-src': 'self',
-        'base-uri': 'self',
-        'form-action': 'self',
-      },
-    },
+    'gatsby-plugin-csp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
