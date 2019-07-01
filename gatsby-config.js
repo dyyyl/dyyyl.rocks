@@ -94,11 +94,11 @@ module.exports = {
       resolve: 'gatsby-plugin-csp',
       directives: {
         'frame-ancestors': 'self',
-        'script-src': "'self' 'unsafe-inline'",
+        'script-src': "'self'",
         'style-src': "'self' 'unsafe-inline'",
         'img-src': "'self'",
         'object-src': 'none',
-        'default-src': 'none',
+        'default-src': 'self',
         'base-uri': 'self',
         'form-action': 'self',
       },
