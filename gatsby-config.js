@@ -78,8 +78,7 @@ module.exports = {
         headers: {
           '/*': [
             'X-Content-Type-Options: nosniff',
-            // "Content-Security-Policy-Report-Only: frame-ancestors 'self'; default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'self'; worker-src 'self'; block-all-mixed-content; manifest-src 'self';",
-            "Content-Security-Policy: default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com",
+            "Content-Security-Policy-Report-Only: frame-ancestors 'self'; default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' data: fonts.googleapis.com; connect-src 'self'; media-src 'self'; object-src 'self'; worker-src 'self'; block-all-mixed-content; manifest-src 'self';",
             'X-Frame-Options: DENY',
             'X-XSS-Protection: 1; mode=block',
           ],
