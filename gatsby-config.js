@@ -78,7 +78,7 @@ module.exports = {
         headers: {
           '/*': [
             'X-Content-Type-Options: nosniff',
-            // "Content-Security-Policy: frame-ancestors 'self'",
+            "Content-Security-Policy: frame-ancestors 'self'; default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'self'; worker-src 'self'; block-all-mixed-content; manifest-src 'self' 'self'; disown-opener; prefetch-src 'self'",
             'X-Frame-Options: DENY',
             'X-XSS-Protection: 1; mode=block',
           ],
