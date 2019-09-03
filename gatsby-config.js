@@ -72,25 +72,25 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-plugin-netlify',
-      options: {
-        headers: {
-          '/*': [
-            'X-Content-Type-Options: nosniff',
-            "Content-Security-Policy-Report-Only: frame-ancestors 'self'; default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' data: fonts.googleapis.com; connect-src 'self'; media-src 'self'; object-src 'self'; worker-src 'self'; block-all-mixed-content; manifest-src 'self';",
-            'X-Frame-Options: DENY',
-            'X-XSS-Protection: 1; mode=block',
-          ],
-        },
-        allPageHeaders: [],
-        mergeSecurityHeaders: true,
-        mergeLinkHeaders: true,
-        mergeCachingHeaders: true,
-        transformHeaders: headers => headers,
-        generateMatchPathRewrites: true,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-netlify',
+    //   options: {
+    //     headers: {
+    //       '/*': [
+    //         'X-Content-Type-Options: nosniff',
+    //         "Content-Security-Policy-Report-Only: frame-ancestors 'self'; default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' data: fonts.googleapis.com; connect-src 'self'; media-src 'self'; object-src 'self'; worker-src 'self'; block-all-mixed-content; manifest-src 'self';",
+    //         'X-Frame-Options: DENY',
+    //         'X-XSS-Protection: 1; mode=block',
+    //       ],
+    //     },
+    //     allPageHeaders: [],
+    //     mergeSecurityHeaders: true,
+    //     mergeLinkHeaders: true,
+    //     mergeCachingHeaders: true,
+    //     transformHeaders: headers => headers,
+    //     generateMatchPathRewrites: true,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
