@@ -77,10 +77,11 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            // 'X-Content-Type-Options: nosniff',
+            'X-Content-Type-Options: nosniff',
             // "Content-Security-Policy-Report-Only: frame-ancestors 'self'; default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' data:; connect-src 'self'; media-src 'self'; object-src 'self'; worker-src 'self'; block-all-mixed-content; manifest-src 'self';",
-            // 'X-Frame-Options: DENY',
-            // 'X-XSS-Protection: 1; mode=block',
+            "Content-Security-Policy: default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://www.google.com",
+            'X-Frame-Options: DENY',
+            'X-XSS-Protection: 1; mode=block',
           ],
         },
         allPageHeaders: [],
