@@ -78,7 +78,7 @@ module.exports = {
         headers: {
           '/*': [
             'X-Content-Type-Options: nosniff',
-            "Content-Security-Policy: frame-ancestors 'self'",
+            "Content-Security-Policy: script-src frame-ancestors 'self'",
             'X-Frame-Options: DENY',
             'X-XSS-Protection: 1; mode=block',
           ],
