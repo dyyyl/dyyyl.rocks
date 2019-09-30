@@ -9,7 +9,8 @@ const Main = styled.article`
   grid-area: main;
 
   @media (max-width: 1199px) {
-    grid-column: navigation / main;
+    grid-column: 1 / 3;
+    align-items: center;
   }
 `;
 

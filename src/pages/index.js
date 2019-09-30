@@ -10,6 +10,7 @@ import Layout from '../shared/components/Layout';
 import Link from '../shared/components/Link';
 import Power from '../shared/components/Power';
 import SEO from '../shared/components/seo';
+import Title from '../shared/components/Title';
 
 import useWindowWidth from '../shared/hooks/useWindowWidth';
 
@@ -22,39 +23,42 @@ const IndexPage = ({ data }) => {
   }, []);
   return (
     <Layout>
-      <Container>
-        <SEO title="Home" />
-        <h1 style={{ fontWeight: '700' }}>Simple & Charming</h1>
-        <h3 style={{ margin: '1rem auto' }}>
-          <Power>{power}x</Power> UI Engineer - GraphQL Enthusiast - Speaker.
-        </h3>
-        <Description>
-          Feel free to <a href="https://github.com/dyyyl">check out my code</a>{' '}
-          👨🏽‍💻
-        </Description>
-        <Description>
-          Follow me on <a href="https://twitter.com/dyyyyyyyyyl">Twitter</a> 🐦
-        </Description>
-      </Container>
-      {width <= 1199 ? (
+      <div>
         <Container>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <Item key={node.id}>
-              <Link to={node.fields.slug}>
-                <h3 style={{ fontWeight: '700' }}>
-                  {node.frontmatter.title.toUpperCase()}
-                </h3>
-                <p>
-                  {node.frontmatter.date} • {node.fields.readingTime.text}
-                </p>
-              </Link>
-              <Excerpt>{node.frontmatter.description}</Excerpt>
-            </Item>
-          ))}
+          <SEO title="Home" />
+          <Title style={{ fontWeight: '700' }}>Simple & Charming</Title>
+          <h3 style={{ margin: '1rem auto' }}>
+            <Power>{power}x</Power> UI Engineer - GraphQL Enthusiast - Speaker.
+          </h3>
+          <Description>
+            Feel free to{' '}
+            <a href="https://github.com/dyyyl">check out my code</a> 👨🏽‍💻
+          </Description>
+          <Description>
+            Follow me on <a href="https://twitter.com/dyyyyyyyyyl">Twitter</a>{' '}
+            🐦
+          </Description>
         </Container>
-      ) : (
-        ''
-      )}
+        {width <= 1199 ? (
+          <Container>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+              <Item key={node.id}>
+                <Link to={node.fields.slug}>
+                  <h3 style={{ fontWeight: '700' }}>
+                    {node.frontmatter.title.toUpperCase()}
+                  </h3>
+                  <p>
+                    {node.frontmatter.date} • {node.fields.readingTime.text}
+                  </p>
+                </Link>
+                <Excerpt>{node.frontmatter.description}</Excerpt>
+              </Item>
+            ))}
+          </Container>
+        ) : (
+          ''
+        )}
+      </div>
     </Layout>
   );
 };
