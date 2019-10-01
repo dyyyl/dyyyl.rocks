@@ -11,10 +11,11 @@ const Main = styled.article`
 
   @media (max-width: 1199px) {
     grid-column: 1 / 3;
+    align-items: center;
   }
 
-  @media (min-width: 610px) {
-    align-items: center;
+  @media (max-width: 610px) {
+    align-items: inherit;
   }
 `;
 
