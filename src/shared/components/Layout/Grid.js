@@ -9,6 +9,14 @@ const Grid = styled.main`
     "title header"
     "navigation main";
 
+  @media (max-height: 535px) {
+    grid-template-rows: 10% 90%;
+  }
+
+  @media (max-height: 385) {
+    grid-template-rows: 15% 85%;
+  }
+
   @media (max-width: 1165px) {
     grid-template-columns: 30% 70%;
     overflow-y: scroll;
