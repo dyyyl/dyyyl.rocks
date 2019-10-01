@@ -8,11 +8,11 @@ const Grid = styled.main`
   grid-template-areas:
     "title header"
     "navigation main";
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
 
   @media (max-width: 1165px) {
     grid-template-columns: 30% 70%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   @media (max-width: 793px) {
