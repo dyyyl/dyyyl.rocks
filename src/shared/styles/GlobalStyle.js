@@ -61,9 +61,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media (max-width: ${theme.screen.md}) {
-    h1 {
-      ${theme.fontSize.regular};
-    }
     h2 {
       ${theme.fontSize.regular};
     }

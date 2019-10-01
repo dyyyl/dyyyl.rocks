@@ -10,6 +10,9 @@ const Main = styled.article`
 
   @media (max-width: 1199px) {
     grid-column: 1 / 3;
+  }
+
+  @media (min-width: 610px) {
     align-items: center;
   }
 `;

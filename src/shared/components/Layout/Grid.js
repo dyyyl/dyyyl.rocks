@@ -9,6 +9,10 @@ const Grid = styled.main`
     "title header"
     "navigation main";
 
+  @media (max-width: 1165px) {
+    grid-template-columns: 30% 70%;
+  }
+
   @media (max-width: 793px) {
     grid-template-columns: 30% 70%;
   }
