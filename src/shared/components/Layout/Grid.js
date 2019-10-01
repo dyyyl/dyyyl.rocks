@@ -13,7 +13,7 @@ const Grid = styled.main`
     grid-template-rows: 10% 90%;
   }
 
-  @media (max-height: 385) {
+  @media (max-height: 385px) {
     grid-template-rows: 15% 85%;
   }
 
