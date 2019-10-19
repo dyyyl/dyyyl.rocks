@@ -4,7 +4,7 @@ const getToday = () => {
   const timeZone = 'Europe/Berlin';
   return format(
     utcToZonedTime(new Date(), timeZone),
-    'dd/MM/yyyy HH:mma',
+    'dd/MM/yyyy HH:mmaa',
     timeZone,
   );
 };
