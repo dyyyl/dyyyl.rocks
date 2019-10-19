@@ -6,7 +6,8 @@
   "author": "Dyl 🦊 <hey@dyyyl.rocks>",
   "dependencies": {
     "browser-monads": "^1.0.0",
-    "date-fns": "^1.30.1",
+    "date-fns": "^2.5.1",
+    "date-fns-tz": "^1.0.8",
     "gatsby": "^2.5.7",
     "gatsby-image": "^2.1.0",
     "gatsby-plugin-manifest": "^2.1.1",

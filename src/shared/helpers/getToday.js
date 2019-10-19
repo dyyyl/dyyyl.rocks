@@ -1,6 +1,11 @@
-import { format } from 'date-fns';
-import { de } from 'date-fns/locale/de';
+import { utcToZonedTime, format } from 'date-fns-tz';
 
-const getToday = () => format(new Date(), 'MM/DD/YYYY HH:mma', { locale: de });
-
+const getToday = () => {
+  const timeZone = 'Europe/Berlin';
+  return format(
+    utcToZonedTime(new Date(), timeZone),
+    'dd/MM/yyyy HH:mma',
+    timeZone,
+  );
+};
 export default getToday;

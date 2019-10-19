@@ -1,16 +1,25 @@
-import { window, document } from 'browser-monads';
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+
+let defaultWidth;
+
+if (typeof window !== 'undefined') {
+  defaultWidth = window.innerWidth;
+}
 
 const useWindowWidth = () => {
-  const [width, setWidth] = useState(document.documentElement.clientWidth);
+  const [width, setWidth] = useState(defaultWidth);
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    const handler = () => setWidth(window.innerWidth);
+
+    setTimeout(() => {
+      handler();
+    }, 100);
+
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
   }, []);
+
   return width;
 };
 
